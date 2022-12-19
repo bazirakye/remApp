@@ -13,11 +13,12 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    @vite(['resources/js/app.js'])
+    
     @livewireStyles
 </head>
 <body>
     <div id="app">
+        @auth
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -71,11 +72,13 @@
                 </div>
             </div>
         </nav>
+        @endauth
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    @vite(['resources/js/app.js'])
     @livewireScripts
 </body>
 </html>

@@ -53,4 +53,6 @@ class HomeController extends Controller
         // $patients = Patient::orderBy('return_visit_date', 'desc')->get();
         return view('clients.custom-sms');
     }
+
+    // upload single patient in
 }

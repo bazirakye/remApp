@@ -22,18 +22,7 @@
             </div>
         </div>
         <div class="col-md-9">
-            <div class="card"  style="min-height: 500px">
-                <div class="card-header bg-success d-flex justify-content-between">
-                    <h4 class="text-light">Update Database</h3>
-                    <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#addSingle">New Patient</button>
-                </div>
-                <div class="card-body text-center">
-                    <h4>Upload your excel file to update database</h4>
-
-                    @livewire('upload-file')
-
-                </div>
-            </div>
+            @livewire('upload-file')
         </div>
     </div>
 </div>
