@@ -26,7 +26,7 @@
                 <div class="card-header bg-success text-light pt-3 pb-2">{{ __('Patient Lists') }}</div>
 
                 <div class="card-body">
-                    <div class="table-responsive-md">
+                    <div class="table-responsive">
                         <table class="table table-hover align-middle">
                             <thead class="table-light">
                                 <caption>Patient Lists Table</caption>
@@ -52,7 +52,7 @@
                                             <td>{{ $item->gender }}</td>
                                             <td>{{ $item->hiv_viral_load_date }}</td>
                                             <td>{{ $item->return_visit_date }}</td>
-                                            <td>{{ $item->telephone_number }}</td>
+                                            <td>0{{ $item->telephone_number }}</td>
                                             <td>{{ $item->care_giver_telephone_number }}</td>
                                             <td><button class="btn btn-sm btn-success">Edit</button></td>
                                         </tr>
@@ -62,11 +62,11 @@
                                         <td colspan="9">No Patient yet</td>
                                     </tr>
                                     @endif
-                                </tbody>
-                                <tfoot>
 
-                                </tfoot>
+                                </tbody>
+
                         </table>
+                        {{ $patients->links() }}
                     </div>
 
 

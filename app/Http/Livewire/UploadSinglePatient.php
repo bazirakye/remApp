@@ -15,6 +15,7 @@ class UploadSinglePatient extends Component
     public $return_visit_date;
     public $phone_number;
     public $care_giver_phone_number;
+
     public function addSingle(){
         $this->validate([
             'hiv_clinic_no' => 'required',
@@ -26,7 +27,7 @@ class UploadSinglePatient extends Component
             'phone_number' => 'required',
             'care_giver_phone_number' => 'required'
         ]);
-    
+
         $create = Patient::create([
             'hiv_clinic_no' => $this->hiv_clinic_no,
             'family_name' => $this->family_name,
@@ -49,6 +50,8 @@ class UploadSinglePatient extends Component
 
     public function filterPatient($clinic) {
         //if clinic already exists
+        $clinic = 'OKO/010';
+
         $check = Patient::where('hiv_clinic_no', $clinic)->first();
 
         if($check !== null) {

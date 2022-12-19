@@ -67,6 +67,7 @@
 
                                 </tfoot>
                         </table>
+                        {{ $patients->links() }}
                     </div>
 
 
